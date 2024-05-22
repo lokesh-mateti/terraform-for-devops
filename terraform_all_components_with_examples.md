@@ -1,4 +1,4 @@
-Certainly! Let's dive deeper into each Terraform component with detailed information and examples.
+Let's dive deeper into each Terraform component with detailed information and examples.
 
 ### 1. Configuration Files (.tf)
 Terraform configurations are written in HashiCorp Configuration Language (HCL). These files define the desired state of your infrastructure.
