@@ -20,7 +20,9 @@ Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCo
 
 #### **2. Setting Up the Environment**
 
-### **Step 1: Download and Install AWS CLI**
+#### ** We need to have AWS CLI and Terraform to be installed and configured, details given below.
+
+#### **Step 1: Download and Install AWS CLI**
 AWS CLI (Command Line Interface) can be installed on various operating systems. Follow the appropriate steps for your system:
 
 #### **For Windows**
@@ -114,7 +116,7 @@ aws s3 ls
 - Internet access.
 - A cloud provider account (e.g., AWS Free Tier for practice).
 
-**Installation Steps:**
+**Terraform Installation Steps:**
 1. **Download Terraform:**
    - Go to the [official Terraform website](https://www.terraform.io/downloads).
    - Download the appropriate version for your operating system.
