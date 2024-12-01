@@ -20,6 +20,95 @@ Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCo
 
 #### **2. Setting Up the Environment**
 
+### **Step 1: Download and Install AWS CLI**
+AWS CLI (Command Line Interface) can be installed on various operating systems. Follow the appropriate steps for your system:
+
+#### **For Windows**
+1. **Download the AWS CLI MSI installer** from the [AWS CLI official download page](https://aws.amazon.com/cli/).  
+   Alternatively, you can directly access the installer for Windows [here](https://awscli.amazonaws.com/AWSCLIV2.msi).
+2. Run the MSI installer and follow the on-screen instructions.
+
+#### **For macOS**
+1. Open a terminal.
+2. Install using Homebrew:
+   ```bash
+   brew install awscli
+   ```
+3. Verify the installation:
+   ```bash
+   aws --version
+   ```
+
+#### **For Linux**
+1. Use the following commands:
+   ```bash
+   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+   unzip awscliv2.zip
+   sudo ./aws/install
+   ```
+2. Verify installation:
+   ```bash
+   aws --version
+   ```
+
+---
+
+### **Step 2: Set Environment Path**
+After installation, ensure the AWS CLI executable is in your system's `PATH`.
+
+#### **For Windows**
+1. Right-click on **This PC** or **My Computer** and select **Properties**.
+2. Go to **Advanced System Settings > Environment Variables**.
+3. Under **System Variables**, find **Path**, and click **Edit**.
+4. Add the path to your AWS CLI installation, typically:
+   ```plaintext
+   C:\Program Files\Amazon\AWSCLI\bin
+   ```
+5. Click **OK** to save the changes.
+
+#### **For macOS/Linux**
+The installer typically adds AWS CLI to the system path. You can confirm by running:
+```bash
+echo $PATH
+```
+If it’s not in the path, manually add the installation directory to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.) like so:
+```bash
+export PATH=$PATH:/usr/local/bin/aws
+```
+Then reload the configuration:
+```bash
+source ~/.bashrc
+```
+
+---
+
+### **Step 3: Configure AWS CLI**
+To set up AWS CLI with your credentials:
+
+1. Run the following command:
+   ```bash
+   aws configure
+   ```
+2. Enter the required details:
+   - **AWS Access Key ID**: Get it from your AWS IAM account.
+   - **AWS Secret Access Key**: Also from AWS IAM.
+   - **Default Region**: For example, `us-east-1`.
+   - **Default Output Format**: Choose `json`, `text`, or `table`.
+
+---
+
+### **Step 4: Verify AWS CLI Configuration**
+Test the configuration by running a simple AWS CLI command, such as listing all S3 buckets:
+```bash
+aws s3 ls
+```
+
+---
+
+### **Resources and Official Site**
+- **AWS CLI Documentation**: [https://docs.aws.amazon.com/cli/latest/userguide/](https://docs.aws.amazon.com/cli/latest/userguide/)
+- **AWS CLI Downloads**: [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/)
+
 **Prerequisites:**
 - A computer with a supported operating system (Windows, macOS, Linux).
 - Internet access.
